@@ -1,0 +1,754 @@
+:root {
+  --main-color: #b30059;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+.landingpage {
+  background-image: url(../images/cover3.jpg);
+  position: relative;
+  min-height: 100vh;
+  background-size: cover;
+}
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(48, 52, 61, 0.85);
+}
+
+.landingpage .container {
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+}
+.header {
+  z-index: 999999;
+  background-color: #fbf9f3;
+  display: flex;
+  width: 100%;
+  height: 80px;
+}
+.header .sticky {
+  display: flex;
+}
+#logo {
+  width: 150px;
+  height: 80px;
+  text-align: left;
+  margin: 0;
+  border-radius: 50%;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
+.landingpage .header .links-container {
+  width: 100%;
+  text-align: right;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+.header .links {
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+  font-size: 15px;
+  padding-top: 15px;
+  font-weight: bold;
+}
+.header .links li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.header .links li a {
+  color: #adad85;
+  text-decoration: none;
+  margin: 5px;
+}
+.header .links li a.active {
+  color: var(--main-color);
+}
+.header .links li a:active,
+.header .links li a:hover {
+  color: var(--main-color);
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 20px;
+}
+.content-header {
+  position: absolute;
+  width: 95%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #adad85;
+  text-align: center;
+}
+.content-header h2 {
+  font-size: 40px;
+}
+.content-header span {
+  color: var(--main-color);
+  font-size: 40px;
+  font-weight: bolder;
+}
+.content-header p {
+  font-size: 28px;
+  line-height: 1.5;
+  margin: 0;
+}
+.header-buttons button {
+  margin-top: 20px;
+  margin-left: 15px;
+  padding: 10px 5px 10px 5px;
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.header-buttons .button1 {
+  border: transparent;
+  background-color: var(--main-color);
+  color: whitesmoke;
+  font-weight: bolder;
+}
+.header-buttons .button1:hover {
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  color: #adad85;
+  transition: 0.3s;
+}
+.header-buttons .button2 {
+  background-color: transparent;
+  border: 2px solid#adad85;
+  color: #adad85;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.header-buttons .button2:hover {
+  background-color: var(--main-color);
+  border: transparent;
+  color: whitesmoke;
+  transition: 0.3;
+}
+/*Start About me Secation*/
+.about-me {
+  width: 100%;
+}
+.part1 .my-image {
+  float: left;
+  width: 40%;
+  margin-top: 10px;
+}
+.part1 .my-image img {
+  height: 450px;
+  border-radius: 50%;
+  margin-left: 25px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+.part1 .my-about {
+  float: right;
+  width: 60%;
+  height: 450px;
+}
+.heading-underline {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  margin-left: 60px;
+}
+
+.heading-underline::before,
+.heading-underline::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #adad85;
+  top: 4px;
+}
+.heading-underline::after {
+  left: -60px;
+}
+.heading-underline::before {
+  left: 20px;
+}
+.part1 .my-about h2 {
+  margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.part1 .my-about p {
+  line-height: 1.5;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.part1 button {
+  width: 250px;
+  height: 60px;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #adad85;
+  color: #003366;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+.part1 button:hover {
+  background-color: var(--main-color);
+  color: whitesmoke;
+  transition: 0.3s;
+}
+
+.my-progress .chooseme {
+  width: 49%;
+  float: left;
+}
+.my-progress .allprogress {
+  width: 49%;
+  float: right;
+  margin-left: 10px;
+}
+/* Style the button that is used to open and close the collapsible content */
+
+.collapsible {
+  background-color: transparent;
+  color: #003366;
+  cursor: pointer;
+  padding: 18px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.collapsible.active {
+  background-color: var(--main-color);
+  color: whitesmoke;
+  margin-bottom: 0;
+  transition: 0.3s;
+}
+
+/* Style the collapsible content */
+.content {
+  display: none;
+  padding: 10px;
+  background-color: #003366;
+  color: #adad85;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-top: 0;
+  transition: 0.3s;
+}
+/*skolls bar*/
+.container-progress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  right: 0;
+}
+
+.html {
+  width: 90%;
+  background-color: #4caf50;
+}
+.css {
+  width: 80%;
+  background-color: #2196f3;
+}
+.js {
+  width: 65%;
+  background-color: #f44336;
+}
+.php {
+  width: 60%;
+  background-color: #808080;
+}
+/*skills bar*/
+/*End About us Secation*/
+
+.clearfix {
+  clear: both;
+}
+.my-counter {
+  background-image: url(../images/my\ counter\ cover.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin-top: 40px;
+  text-align: center;
+}
+.my-counter h2 {
+  color: whitesmoke;
+  font-size: 28px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+.myprogress-underline {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  margin-left: 50%;
+}
+
+.myprogress-underline::before,
+.myprogress-underline::after {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #adad85;
+  top: 4px;
+}
+.myprogress-underline::after {
+  left: -90px;
+}
+.myprogress-underline::before {
+  left: 20px;
+}
+.my-counter .row p {
+  color: whitesmoke;
+  font-size: 20px;
+}
+.my-counter .row2 {
+  width: 95%;
+  margin-top: 50px;
+}
+.my-counter .insertrow {
+  display: inline-block;
+  margin-right: 10px;
+  width: calc(95% / 4);
+}
+.my-counter .insertrow i {
+  font-size: 80px;
+  margin-bottom: 15px;
+}
+.my-counter .insertrow span {
+  display: block;
+  font-weight: 400;
+  font-size: 60px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 90px;
+}
+.my-counter .insertrow p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.awsomework h2 {
+  color: rgb(5, 5, 5);
+  font-size: 28px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 40px;
+  position: relative;
+}
+.awsomework p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.awsomework .myprojects-work {
+  width: 100%;
+  position: relative;
+}
+.awsomework .design-project {
+  display: inline-block;
+  position: relative;
+}
+.awsomework .myprojects-work .img-overlay {
+  display: none;
+  background-color: #141d31;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 63px;
+  width: 326px;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 3px;
+}
+.awsomework .myprojects-work .img-overlay h4 {
+  padding-left: 20px;
+  font-size: 23px;
+  display: inline-block;
+  margin-top: 18px;
+}
+
+.awsomework .myprojects-work .img-overlay i {
+  font-size: 25px;
+  margin-left: 116px;
+  margin-top: 16px;
+}
+.awsomework .design-project:hover .img-overlay {
+  display: block;
+}
+.awsomework .myprojects-work .project-img img {
+  width: calc(99% / 4);
+  display: inline-block;
+  height: 200px;
+  width: 326px;
+  margin: 0;
+  padding: 0;
+}
+.conect-me {
+  background: linear-gradient(45deg, #b30059, #7a797a);
+  width: 100%;
+  height: 230px;
+  margin-top: 72px;
+  padding-top: 20px;
+  padding-left: 55px;
+  color: whitesmoke;
+}
+.conect-me .text h2 {
+  color: #141d31;
+  margin-bottom: 39px;
+  font-size: 30px;
+}
+.conect-me .text p {
+  color: #adad85;
+  font-size: 18px;
+}
+.conect-me button {
+  background-color: #1b2d56;
+  color: antiquewhite;
+  width: 195px;
+  height: 53px;
+  border-radius: 10px;
+  float: right;
+  margin-right: 158px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -68px;
+  cursor: pointer;
+}
+.row-can {
+  text-align: center;
+}
+.row-can p {
+  margin-top: 23px;
+}
+.all-services {
+  width: 95%;
+  margin-top: 60px;
+  text-align: center;
+}
+.services-row {
+  width: calc(95% / 3);
+  display: inline-block;
+  text-align: center;
+}
+.services-row i {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 45px;
+  color: #30343d;
+  border: 1px solid #30343d;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.services-row i:hover {
+  background-color: var(--main-color);
+  color: whitesmoke;
+}
+.services-row h3 {
+  margin-top: 10px;
+  font-size: 25px;
+}
+.services-row h3:hover {
+  color: var(--main-color);
+  font-weight: bolder;
+}
+.services-row p {
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.row-can {
+  margin-top: 40px;
+  padding-top: 30px;
+}
+.myWorkSection {
+  background-color: #ebebe0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+  grid-gap: 3.125rem;
+  align-items: stretch;
+  margin-top: 60px;
+  padding-bottom: 50px;
+}
+
+section {
+  padding: 6.25rem 0;
+}
+
+.price-table {
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 2.5rem rgba(0, 0, 0, 0.2),
+    0 1.25rem 3.125rem rgba(0, 0, 0, 0.3);
+  border-radius: 1.25rem;
+}
+
+.price-table .price-head {
+  padding: 3.125rem;
+  background: linear-gradient(45deg, #f321d6, #7a797a);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.price-table .price-head h4 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.price-table .price-head h2 {
+  margin: 0;
+  padding: 1.25rem 0;
+  font-size: 1.625rem;
+  color: #fff;
+}
+
+.price-table .price-content ul {
+  margin: 0;
+  padding: 1.25rem 0;
+}
+
+.price-table .price-content ul li {
+  list-style: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0.625rem 0;
+  color: #777;
+  cursor: pointer;
+  border-left: 0.94rem solid transparent;
+  border-right: 0.94rem solid transparent;
+  transition: 0.5s;
+}
+
+.price-table .price-content ul li:hover {
+  border-left-color: #9e02c5;
+  border-right-color: #9e02c5;
+}
+
+.price-table .price-button {
+  padding: 0 0 1.875rem;
+}
+
+.price-table .price-button a {
+  padding: 0.625rem 2.5rem;
+  background: linear-gradient(45deg, #f321d6, #5121f3);
+  color: #fff;
+  border-radius: 1.56rem;
+  font-size: 1.13rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.subscripnow {
+  background: linear-gradient(180deg, #3d3d29, #ff66b3);
+  color: whitesmoke;
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+.subscripnow p {
+  margin-bottom: 40px;
+}
+.subscripnow input {
+  width: 410px;
+  height: 50px;
+  margin-right: 0;
+  padding-left: 15px;
+  border: 1px solid transparent;
+}
+.subscripnow input:focus {
+  border: 3px solid #adad85;
+  box-shadow: none;
+  outline: none;
+}
+.subscripnow button {
+  height: 50px;
+  margin-left: -6px;
+  background-color: #1b2d56;
+  color: whitesmoke;
+  width: 160px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.contact-icons {
+  height: 200px;
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.contact-icons .contact-details {
+  display: inline-block;
+  width: calc(99% / 3);
+  text-align: center;
+}
+.contact-icons .contact-details i {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 45px;
+  color: #30343d;
+  border: 1px solid #30343d;
+  margin-bottom: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.contact-icons .contact-details i:hover {
+  background-color: var(--main-color);
+  color: whitesmoke;
+}
+.contact-icons .contact-details h3 {
+  color: var(--main-color);
+  font-size: 25px;
+}
+.contact-icons .contact-details p {
+  color: #6b6b47;
+  margin-bottom: 50px;
+}
+.or {
+  text-transform: uppercase;
+  position: relative;
+  margin: 160px auto 200px;
+  text-align: center;
+}
+.or::before,
+.or::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: #30343d;
+  left: 50%;
+}
+.or::before {
+  top: -120px;
+}
+.or::after {
+  bottom: -120px;
+}
+.social-links {
+  width: 100%;
+  text-align: center;
+}
+.social-links h2 {
+  color: #6b6b47;
+}
+.social-links a {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.social-links i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 0;
+  text-align: center;
+  background-color: #30343d;
+  color: #fff;
+  font-size: 30px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding-bottom: 0;
+}
+.social-links i:hover {
+  background-color: var(--main-color);
+  color: whitesmoke;
+}
+.footer {
+  background-color: #30343d;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+  height: 90px;
+  margin-top: 50px;
+  padding: 50px;
+}
+.footer span {
+  color: var(--main-color);
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--main-color); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
